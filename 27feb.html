@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.counter {
+  margin: 20px 0;
+}
+
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+#count {
+  font-size: 36px;
+  margin: 0 10px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Counter App</h1>
+    <div class="counter">
+      <button id="subtractBtn">-</button>
+      <span id="count">0</span>
+      <button id="addBtn">+</button>
+    </div>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <script>
+    // Get the buttons and count element
+const subtractBtn = document.getElementById('subtractBtn');
+const addBtn = document.getElementById('addBtn');
+const resetBtn = document.getElementById('resetBtn');
+const countElement = document.getElementById('count');
+
+// Initialize the counter
+let count = 0;
+countElement.textContent = count;
+
+// Event listeners for buttons
+subtractBtn.addEventListener('click', () => {
+  count--;
+  countElement.textContent = count;
+});
+
+addBtn.addEventListener('click', () => {
+  count++;
+  countElement.textContent = count;
+});
+
+resetBtn.addEventListener('click', () => {
+  count = 0;
+  countElement.textContent = count;
+});
+
+  </script>
+</body>
+</html>
